@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(135, 201, 223);
+}
+
+header {
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#checkburg {
+    position: absolute;
+    opacity: 0;
+}
+
+label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(26, 26, 26);
+    border-radius: 20px;
+    position: fixed;
+    left: 5px;
+}
+
+label span {
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 2px;
+    border-radius: 2rem;
+    background-color: rgb(255, 255, 255);
+    transition: 1s ease-in-out;
+}
+
+label span:nth-child(1) {
+    top: 8px;
+    left: 3px;
+}
+
+label span:nth-child(2) {
+    top: 14px;
+    left: 3px;
+}
+
+label span:nth-child(3) {
+    top: 20px;
+    left: 3px;
+}
+
+#checkburg:checked+label span:nth-child(1) {
+    transform: rotate(-50deg);
+    top: 14px;
+    transition: 0.50s;
+}
+
+#checkburg:checked+label span:nth-child(2) {
+    visibility: hidden;
+    transition: 0.30s;
+    opacity: 50%;
+}
+
+#checkburg:checked+label span:nth-child(3) {
+    transform: rotate(50deg);
+    top: 14px;
+    transition: 0.50s;
+}
+
+.menu {
+    position: fixed;
+    visibility: hidden;
+    background-color: rgb(255, 255, 255);
+    width: 110px;
+    height: 200px;
+    border-radius: 1rem;
+    top: 40px;
+    transition: 0.30s;
+    left: 5px;
+}
+
+.menu a {
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    padding: 10px 10px;
+    display: block;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+    transition: 0.90s;
+    border-radius: 0.5rem;
+}
+
+#checkburg:checked~.menu {
+    visibility: visible;
+}

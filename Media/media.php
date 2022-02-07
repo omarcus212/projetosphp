@@ -2,32 +2,33 @@
 
 require('./modulo/config.php');
 
-$nota1 = (float) null;
-$nota2 =  (float) null;
-$nota3 = (float) null;
-$nota4 = (float) null;
-$totalmedia = (float) null;
+$nota1 = (Double)0;
+$nota2 =  (Double)0;
+$nota3 = (Double)0;
+$nota4 = (Double)0;
+$totalmedia = (Double)0;
 
 
 
 if (isset($_POST["btncalc"])) {   //calcular depois que o botão for clicked//
 
 
-    $nota1 = (float)0;
-    $nota2 = (float)0;
-    $nota3 = (float)0;
-    $nota4 = (float)0;
+    $nota1 = (Double)0;
+    $nota2 = (Double)0;
+    $nota3 = (Double)0;
+    $nota4 = (Double)0;
 
     $nota1 = $_POST["txtn1"];
     $nota2 = $_POST["txtn2"];
     $nota3 = $_POST["txtn3"];
     $nota4 = $_POST["txtn4"];
 
-    // if ($_POST['ttxtn1'] == '' || $_POST['ttxtn2'] == ''   || $_POST['ttxtn3'] == '' || $_POST['ttxtn4'] == '') {
+       if ($_POST['txtn1'] == '' || $_POST['txtn2'] == ''   || $_POST['txtn3'] == '' || $_POST['txtn4'] == '') {
 
-    //     // echo (ERRO_MSG_CAIXA_VAZIA);
-    // } else {
-    // }
+           echo (ERRO_MSG_CAIXA_VAZIA);
+
+        } else {
+         }
     if (!is_numeric($nota1) || !is_numeric($nota2) || !is_numeric($nota3) || !is_numeric($nota4)) {
         echo (ERRO_MSG_CARACTER_INVALIDO);
     } else {
@@ -35,11 +36,12 @@ if (isset($_POST["btncalc"])) {   //calcular depois que o botão for clicked//
         $totalmedia = ($nota1 + $nota2 + $nota3 + $nota4) / 4;
     }
 } else {     //deixando as variaveis em branco caso o butão não tenha sido clicked//
-    $nota1 = null;
-    $nota2 = null;
-    $nota3 = null;
-    $nota4 = null;
-    $totalmedia = null;
+    $nota1 = (Double)null;
+    $nota2 =  (Double)null;
+    $nota3 = (Double)null;
+    $nota4 = (Double)null;
+    $totalmedia = (Double)null;
+
 }
 
 
@@ -81,7 +83,7 @@ if (isset($_POST["media.php"])) {     //zerar as variaveis para uma novo calculo
             </label>
             <div class="menu">
                 <ul>
-                    <li><a href="../Calculadora//calculadora_simples.php">Calculadora</a></li>
+                    <li><a href="../Calculadora/calculadora_simples.php">Calculadora</a></li>
                     <li><a href="">Media</a></li>
                     <li><a href="">Multiplicação</a></li>
                     <li><a href="">Impar e Par</a></li>
@@ -99,7 +101,7 @@ if (isset($_POST["media.php"])) {     //zerar as variaveis para uma novo calculo
                 <form name="frmMedia" method="post" action="media.php">
                     <div>
 
-                        <p>Nota 1:</p> <input type="text" name="txtn1" value="<?php echo ($nota1) ?>">
+                        Nota 1: <input type="text" name="txtn1" value="<?php echo ($nota1) ?>">
                     </div>
 
                     <div>

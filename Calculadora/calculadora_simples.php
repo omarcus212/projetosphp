@@ -63,8 +63,8 @@
             </label>
                 <div class="menu">
                     <ul>
-                        <li><a href="../Calculadora//calculadora_simples.php">Calculadora</a></li>
-                        <li><a href="../Media//media.php">Media</a></li>
+                        <li><a href="">Calculadora</a></li>
+                        <li><a href="../Media/media.php">Media</a></li>
                         <li><a href="">Multiplicação</a></li>
                         <li><a href="">Impar e Par</a></li>
                     </ul>

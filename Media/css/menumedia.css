@@ -19,22 +19,22 @@ header {
     opacity: 0;
 }
 
-.conteudo label {
+label {
     cursor: pointer;
     position: relative;
     display: block;
-    height: 30px;
-    width: 30px;
-    background-color: rgb(26, 26, 26);
+    height: 40px;
+    width:40px;
+    background-color: rgb(0, 0, 0);
     border-radius: 20px;
     position: fixed;
-    left: 5px;
+    left: 4px;
 }
 
 label span {
     position: absolute;
     display: block;
-    width: 80%;
+    width: 30px;
     height: 2px;
     border-radius: 2rem;
     background-color: rgb(255, 255, 255);
@@ -42,23 +42,23 @@ label span {
 }
 
 label span:nth-child(1) {
-    top: 8px;
-    left: 3px;
+    top: 12px;
+    left: 5px;
 }
 
 label span:nth-child(2) {
-    top: 14px;
-    left: 3px;
+    top: 18px;
+    left: 5px;
 }
 
 label span:nth-child(3) {
-    top: 20px;
-    left: 3px;
+    top: 24px;
+    left: 5px;
 }
 
 #checkburg:checked+label span:nth-child(1) {
     transform: rotate(-50deg);
-    top: 14px;
+    top: 18px;
     transition: 0.50s;
 }
 
@@ -70,7 +70,7 @@ label span:nth-child(3) {
 
 #checkburg:checked+label span:nth-child(3) {
     transform: rotate(50deg);
-    top: 14px;
+    top: 18px;
     transition: 0.50s;
 }
 

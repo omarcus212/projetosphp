@@ -1,0 +1,76 @@
+#conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background-color: rgb(148, 148, 148);
+    margin-left: 2px;
+    top: 90px;
+}
+
+#titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: black;
+    width: 400px;
+    height: 100px;
+    top: 10px;
+}
+
+#titulo h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+#form {
+    gap: 30px;
+}
+
+#form #multcaixa {
+    margin-top: 5px;
+    margin-left: 28px;
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+}
+
+#form #maxcaixa {
+    top: 10px;
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+}
+
+#resultado {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 50%;
+    width: 50%;
+    left: 150px;
+    top: 80px;
+}
+
+#form #calc {
+    position: absolute;
+    margin-top: 200px;
+    left: 20px;
+    font-size: 20px;
+    background-color: greenyellow;
+}
+
+#form #limpar {
+    position: absolute;
+    margin-top: 200px;
+    left: 100px;
+    font-size: 20px;
+    background-color: rgb(235, 39, 39);
+}

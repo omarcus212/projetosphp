@@ -23,71 +23,75 @@ label {
     cursor: pointer;
     position: relative;
     display: block;
-    height: 30px;
-    width: 30px;
-    background-color: rgb(26, 26, 26);
-    border-radius: 20px;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
     position: fixed;
-    left: 5px;
+    left: 10px;
+    top: 20px;
 }
 
 label span {
     position: absolute;
     display: block;
-    width: 80%;
-    height: 2px;
+    width: 60%;
+    height: 4px;
     border-radius: 2rem;
-    background-color: rgb(255, 255, 255);
-    transition: 1s ease-in-out;
+    background-color: rgb(0, 0, 0);
+    transition: 0.50s ease-in-out;
+    margin-left: 4px;
 }
 
 label span:nth-child(1) {
-    top: 8px;
-    left: 3px;
+    top: 12px;
+    left: 5px;
 }
 
 label span:nth-child(2) {
-    top: 14px;
-    left: 3px;
+    top: 22px;
+    left: 5px;
 }
 
 label span:nth-child(3) {
-    top: 20px;
-    left: 3px;
+    top: 32px;
+    left: 5px;
 }
 
 #checkburg:checked+label span:nth-child(1) {
     transform: rotate(-50deg);
-    top: 14px;
-    transition: 0.50s;
+    top: 22px;
+    transition: 0.30s;
 }
 
 #checkburg:checked+label span:nth-child(2) {
     visibility: hidden;
-    transition: 0.30s;
+    transition: 0.10s;
     opacity: 50%;
 }
 
 #checkburg:checked+label span:nth-child(3) {
     transform: rotate(50deg);
-    top: 14px;
-    transition: 0.50s;
+    top: 22px;
+    transition: 0.30s;
 }
 
 .menu {
     position: fixed;
     visibility: hidden;
     background-color: rgb(255, 255, 255);
-    width: 110px;
-    height: 200px;
+    width: 150px;
+    height: 300px;
     border-radius: 1rem;
-    top: 40px;
+    top: 90px;
     transition: 0.30s;
-    left: 5px;
+    left: 10px;
+    list-style: none;
+    text-decoration: none;
 }
 
 .menu a {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
     list-style: none;

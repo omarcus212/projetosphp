@@ -8,9 +8,9 @@
     position: absolute;
     width: 400px;
     height: 300px;
-    background-color: rgb(148, 148, 148);
+    background-color: rgba(216, 214, 214, 0.829);
     margin-left: 2px;
-    top: 90px;
+    top: 100px;
 }
 
 #titulo {
@@ -20,7 +20,7 @@
     position: absolute;
     background-color: black;
     width: 400px;
-    height: 100px;
+    height: 90px;
     top: 10px;
 }
 
@@ -57,6 +57,7 @@
     width: 50%;
     left: 150px;
     top: 80px;
+    overflow-y: scroll;
 }
 
 #form #calc {

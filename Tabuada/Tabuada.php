@@ -19,16 +19,16 @@ if (isset($_POST['btncalc'])) {
         
         while($contdor<=$max){
             $total = $min*$contdor;
-            // echo($min. 'x' .$contdor. '=' .$total. '<br>');
-             $resultado = $_POST['resultado'] = $min. 'x' .$contdor. '=' .$total;
+             $resultado .= " $min x  $contdor = $total <br> ";
              
                $contdor++;
 
           }
+        
 
     }
 
-            $resultado =$resultado;
+         
 }
 
 
@@ -93,7 +93,7 @@ if (isset($_POST['btncalc'])) {
 
                     </div>
                     <div id="resultado">
-                        <?php echo($resultado);?>
+                        <?= $resultado?>
                     </div>
 
                 </form>

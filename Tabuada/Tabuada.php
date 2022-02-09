@@ -1,3 +1,40 @@
+<?php
+
+$max = (double)0;
+$min = (double)0;
+$contdor = (double)0;
+$resultado = (double)0;
+
+
+if (isset($_POST['btncalc'])) {
+
+    $min = $_POST['txtn1'];
+    $max = $_POST['txtn2'];
+  
+
+    if($_POST['txtn1'] == "" || $_POST['txtn2'] == ""){
+             echo ('Caixa Vazia');
+    }else{
+
+        
+        while($contdor<=$max){
+            $total = $min*$contdor;
+            // echo($min. 'x' .$contdor. '=' .$total. '<br>');
+             $resultado = $_POST['resultado'] = $min. 'x' .$contdor. '=' .$total;
+             
+               $contdor++;
+
+          }
+
+    }
+
+            $resultado =$resultado;
+}
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,6 +93,7 @@
 
                     </div>
                     <div id="resultado">
+                        <?php echo($resultado);?>
                     </div>
 
                 </form>

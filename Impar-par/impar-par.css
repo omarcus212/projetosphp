@@ -1,0 +1,107 @@
+#conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: #755a3fec;
+    margin-left: 2px;
+    top: 100px;
+}
+
+#titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: black;
+    width: 500px;
+    height: 90px;
+    top: 10px;
+}
+
+#titulo h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+#form {
+    gap: 30px;
+    padding: 10px;
+}
+
+#form #imparcaixa {
+    margin-top: 15px;
+    margin-left: 28px;
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+}
+
+#form #parcaixa {
+    top: 50px;
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    margin-left: 47px;
+}
+
+#resultadoimpar {
+    position: absolute;
+    background-color: #e9e6e1;
+    height: 40%;
+    width: 40%;
+    left: 30px;
+    top: 250px;
+    overflow-y: scroll;
+}
+
+#resultadopar {
+    position: absolute;
+    background-color: #e9e6e1;
+    height: 40%;
+    width: 40%;
+    left: 250px;
+    top: 250px;
+    overflow-y: scroll;
+}
+
+#form #calc {
+    position: absolute;
+    margin-top: 30px;
+    left: 65%;
+    font-size: 20px;
+    background-color: greenyellow;
+}
+
+#form #limpar {
+    position: absolute;
+    margin-top: 30px;
+    left: 83%;
+    font-size: 20px;
+    background-color: rgb(235, 39, 39);
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    background-color: rgb(235, 176, 14);
+    width: 80px;
+}
+
+.titleh3 {
+    display: flex;
+    margin-top: 23%;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin-left: 20px;
+}

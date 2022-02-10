@@ -1,38 +1,4 @@
-<?php
-
-$max = (double)0;
-$min = (double)0;
-$contdor = (double)0;
-$resultado = (double)0;
-
-
-if (isset($_POST['btncalc'])) {
-
-    $min = $_POST['txtn1'];
-    $max = $_POST['txtn2'];
-  
-
-    if($_POST['txtn1'] == "" || $_POST['txtn2'] == ""){
-             echo ('Caixa Vazia');
-    }else{
-
-        
-        while($contdor<=$max){
-            $total = $min*$contdor;
-             $resultado .= " $min x  $contdor = $total <br> ";
-             
-               $contdor++;
-
-          }
-        
-
-    }
-
-         
-}
-
-
-
+<?php 
 
 ?>
 <!DOCTYPE html>
@@ -42,9 +8,9 @@ if (isset($_POST['btncalc'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="cssTabuada.css">
-    <title>Tabuada</title>
+    <link rel="stylesheet" href="imppar-menu.css">
+    <link rel="stylesheet" href="impar-par.css">
+    <title>Impar e Par</title>
 </head>
 
 <body>
@@ -65,8 +31,8 @@ if (isset($_POST['btncalc'])) {
                         <ul>
                             <li><a href="../Calculadora/calculadora_simples.php">calculadora</a></li>
                             <li><a href="../Media/media.php">Media</a></li>
-                            <li><a href="">Tabuada</a></li>
-                            <li><a href="../Impar-par/impar-par.html">Impar e Par</a></li>
+                            <li><a href="../Tabuada/Tabuada.php">Tabuada</a></li>
+                            <li><a href="">Impar e Par</a></li>
                         </ul>
                     </div>
                 </div>
@@ -79,21 +45,28 @@ if (isset($_POST['btncalc'])) {
 
         <div id="conteudo">
             <div id="titulo">
-                <h4>Tabuada </h4>
+                <h4>Impar e Par</h4>
             </div>
 
             <div id="form">
                 <form name="frmcalculadora" method="post" action="">
 
-                    Multiplicador: <input type="text" name="txtn1" value="0" id="multcaixa"> <br> Maxmultiplicador: <input type="text" name="txtn2" value="0" id="maxcaixa"> <br>
+                    N. inicial : <input type="text" name="txtn1" value="0" id="imparcaixa"> <br> N. final <input type="text" name="txtn2" value="0" id="parcaixa"> <br>
                     <div id="container_opcoes">
 
                         <input type="submit" name="btncalc" value="Calcular" id="calc">
                         <input type="submit" name="btnlimpar" value="limpar" id="limpar">
 
                     </div>
-                    <div id="resultado">
-                        <?= $resultado?>
+                    <div class="titleh3">
+                        <h3> impar</h3>
+                        <h3> par</h3>
+                    </div>
+
+                    <div id="resultadoimpar">
+                    </div>
+
+                    <div id="resultadopar">
                     </div>
 
                 </form>

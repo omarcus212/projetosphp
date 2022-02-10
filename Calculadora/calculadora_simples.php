@@ -65,8 +65,8 @@
                     <ul>
                         <li><a href="">Calculadora</a></li>
                         <li><a href="../Media/media.php">Media</a></li>
-                        <li><a href="">Multiplicação</a></li>
-                        <li><a href="">Impar e Par</a></li>
+                        <li><a href="../Tabuada/Tabuada.php">Multiplicação</a></li>
+                        <li><a href="../Impar-par/impar-par.html">Impar e Par</a></li>
                     </ul>
                 </div>
             </div>

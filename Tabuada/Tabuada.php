@@ -16,7 +16,7 @@ if (isset($_POST['btncalc'])) {
              echo ('Caixa Vazia');
     }else{
 
-        
+        $resultado='';
         while($contdor<=$max){
             $total = $min*$contdor;
              $resultado .= " $min x  $contdor = $total <br> ";
@@ -42,7 +42,7 @@ if (isset($_POST['btncalc'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="../menu/menu.css">
     <link rel="stylesheet" href="cssTabuada.css">
     <title>Tabuada</title>
 </head>
@@ -85,7 +85,7 @@ if (isset($_POST['btncalc'])) {
             <div id="form">
                 <form name="frmcalculadora" method="post" action="">
 
-                    Multiplicador: <input type="text" name="txtn1" value="0" id="multcaixa"> <br> Maxmultiplicador: <input type="text" name="txtn2" value="0" id="maxcaixa"> <br>
+                    Multiplicador: <input type="text" name="txtn1" id="multcaixa" value="<?php echo($min);?>"> <br> Maxmultiplicador: <input type="text" name="txtn2" id="maxcaixa" value="<?php echo($max);?>" > <br>
                     <div id="container_opcoes">
 
                         <input type="submit" name="btncalc" value="Calcular" id="calc">
@@ -93,7 +93,7 @@ if (isset($_POST['btncalc'])) {
 
                     </div>
                     <div id="resultado">
-                        <?= $resultado?>
+                    <?= $resultado?>
                     </div>
 
                 </form>

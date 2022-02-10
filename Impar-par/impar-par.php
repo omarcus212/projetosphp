@@ -1,4 +1,54 @@
-<?php 
+<?php
+
+
+$valorinicial = (float)0;
+$valorfinal = (float)0;
+$resultadopar = (float)0;
+$resultadoimpar = (float)0;
+$contador = 0;
+$valortotal = 0;
+
+
+if (isset($_POST['btncalc'])) {
+
+    $valorinicial = $_POST['txtn1'];
+    $valorfinal = $_POST['txtn2'];
+
+
+
+
+    if ($valorinicial >= $valorfinal) {
+
+        echo ('<script>alert("ERRO! valor final terá que ser mais alto"); </script>');
+    } else {
+
+        $resultadopar = null;
+        $resultadoimpar = null;
+        $valortotalpar = $valorinicial + $valorfinal;
+        $valortotalimpar = $valorinicial + $valorfinal;
+
+
+   
+         while ($contador <= $valortotal) {
+            while ($valorinicial <= $valorfinal) {
+                    if($valortotalpar % 2 == 0){
+
+                    $resultadopar .= $valortotalpar. 'par';
+
+                    }else{
+
+                        $resultadopar .= $valortotalimpar .'impar';
+                    }
+                    echo ($valorinicial);
+                    $valorinicial++;
+                }
+                $contador++;
+        }
+    }
+}
+
+
+
 
 ?>
 <!DOCTYPE html>
@@ -8,7 +58,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="imppar-menu.css">
+    <link rel="stylesheet" href="../menu/menu.css">
     <link rel="stylesheet" href="impar-par.css">
     <title>Impar e Par</title>
 </head>
@@ -64,6 +114,7 @@
                     </div>
 
                     <div id="resultadoimpar">
+                        <?= $resultadopar ?>
                     </div>
 
                     <div id="resultadopar">

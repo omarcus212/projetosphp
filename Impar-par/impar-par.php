@@ -28,21 +28,26 @@ if (isset($_POST['btncalc'])) {
         $valortotalimpar = $valorinicial + $valorfinal;
 
 
-   
-         while ($contador <= $valortotal) {
+
+        while ($contador <= $valortotal) {
+
             while ($valorinicial <= $valorfinal) {
-                    if($valortotalpar % 2 == 0){
 
-                    $resultadopar .= $valortotalpar. 'par';
+                $resultadopar .= $valorinicial++;
+                $resultadoimpar .= $valorinicial++;
+            }
+            if ($resultadopar % 2 == 0) {
 
-                    }else{
+                $teste = array($resultadopar);
 
-                        $resultadopar .= $valortotalimpar .'impar';
-                    }
-                    echo ($valorinicial);
-                    $valorinicial++;
-                }
-                $contador++;
+                echo sizeof($teste) . 'esse é meu arrey par ';
+            } else if ($resultadoimpar % 2 == 1) {
+
+                $teste = array($resultadoimpar);
+                echo sizeof($teste) . 'esse é meu arrey impar';
+            }
+
+            $contador++;
         }
     }
 }
@@ -114,10 +119,11 @@ if (isset($_POST['btncalc'])) {
                     </div>
 
                     <div id="resultadoimpar">
-                        <?= $resultadopar ?>
+                        <?= $resultadoimpar ?>
                     </div>
 
                     <div id="resultadopar">
+                        <?= $resultadopar ?>
                     </div>
 
                 </form>

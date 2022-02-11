@@ -86,7 +86,7 @@ if (isset($_POST["media.php"])) {     //zerar as variaveis para uma novo calculo
                     <li><a href="../Calculadora/calculadora_simples.php">Calculadora</a></li>
                     <li><a href="">Media</a></li>
                     <li><a href="../Tabuada/Tabuada.php">Multiplicação</a></li>
-                    <li><a href="../Impar-par/impar-par.html">Impar e Par</a></li>
+                    <li><a href="../Impar-par/impar-par.php">Impar e Par</a></li>
                 </ul>
             </div>
         </div>

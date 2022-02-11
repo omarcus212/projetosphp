@@ -15,13 +15,20 @@ if (isset($_POST['btncalc'])) {
     if($_POST['txtn1'] == "" || $_POST['txtn2'] == ""){
              echo ('Caixa Vazia');
     }else{
+          if($max == 0){
+               echo('<script>alert("ERRO! impossivel calcular,caracter invalido"); </script>' );
+           
+          }else{
+            $resultado='';
+            while($contdor<=$max){
+                $total = $min*$contdor;
+                 $resultado .= " $min x  $contdor = $total <br> ";
+                 
+                   $contdor++;
 
-        $resultado='';
-        while($contdor<=$max){
-            $total = $min*$contdor;
-             $resultado .= " $min x  $contdor = $total <br> ";
-             
-               $contdor++;
+
+          }
+       
 
           }
         
@@ -66,7 +73,7 @@ if (isset($_POST['btncalc'])) {
                             <li><a href="../Calculadora/calculadora_simples.php">calculadora</a></li>
                             <li><a href="../Media/media.php">Media</a></li>
                             <li><a href="">Tabuada</a></li>
-                            <li><a href="../Impar-par/impar-par.html">Impar e Par</a></li>
+                            <li><a href="../Impar-par/impar-par.php">Impar e Par</a></li>
                         </ul>
                     </div>
                 </div>

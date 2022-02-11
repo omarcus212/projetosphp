@@ -1,18 +1,19 @@
 <?php
 
-
 $valorinicial = (float)0;
 $valorfinal = (float)0;
 $resultadopar = (float)0;
 $resultadoimpar = (float)0;
 $contador = 0;
 $valortotal = 0;
-
+$ttoalizandopar = 0;
+$ttoalizandoimpar = 0;
+$teste = (int)0;
 
 if (isset($_POST['btncalc'])) {
 
-    $valorinicial = $_POST['txtn1'];
-    $valorfinal = $_POST['txtn2'];
+    $valorinicial = $_POST['listnumeroinicial'];
+    $valorfinal = $_POST['checklistnumerofinal'];
 
 
 
@@ -28,30 +29,39 @@ if (isset($_POST['btncalc'])) {
         $valortotalimpar = $valorinicial + $valorfinal;
 
 
+        while ($valorinicial <= $valorfinal) {
 
-        while ($contador <= $valortotal) {
+            $resultadoimpar .= $valorinicial++ . '<br>';
+            $resultadopar .=  $valorinicial++ . '<br>';
 
-            while ($valorinicial <= $valorfinal) {
+            if ($valorinicial % 2 == 0) {
 
-                $resultadopar .= $valorinicial++;
-                $resultadoimpar .= $valorinicial++;
-            }
-            if ($resultadopar % 2 == 0) {
+                $ttoalizandopar++;
+                $resultadopar;
+            } else {
 
-                $teste = array($resultadopar);
-
-                echo sizeof($teste) . 'esse é meu arrey par ';
-            } else if ($resultadoimpar % 2 == 1) {
-
-                $teste = array($resultadoimpar);
-                echo sizeof($teste) . 'esse é meu arrey impar';
+                $resultadoimpar;
             }
 
-            $contador++;
+            $ttoalizandoimpar++;
         }
+      
+    }
+    if (isset($_POST['btnlimpar'])) {
+
+        $valorinicial = (float)0;
+        $valorfinal = (float)0;
+        $resultadopar = (float)0;
+        $resultadoimpar = (float)0;
+        $contador = 0;
+        $valortotal = 0;
     }
 }
 
+while($contador <= 500){
+    $teste .= '<option value="'. $contador .'">'. $contador. '</option>';
+   $contador++;
+}
 
 
 
@@ -105,8 +115,22 @@ if (isset($_POST['btncalc'])) {
 
             <div id="form">
                 <form name="frmcalculadora" method="post" action="">
+                 
+                 <select name="listnumeroinicial" id="list1" min='0' max='500' >
+                 <option value="0" selected> escolha:  </option >
+                  <?= $teste ?> 
+                
+                
 
-                    N. inicial : <input type="text" name="txtn1" value="0" id="imparcaixa"> <br> N. final <input type="text" name="txtn2" value="0" id="parcaixa"> <br>
+                 </select>
+                    <select name="checklistnumerofinal" id="list2">
+                    <option value="0" selected> escolha:  </option >
+                    <option value="1"> 1 </option>
+                    <option value="2"> 2 </option>
+                    <option value="3"> 3 </option>
+                    <option value="9"> 9 </option>
+                    <option value="1000"> 1000 </option>
+                    </select>
                     <div id="container_opcoes">
 
                         <input type="submit" name="btncalc" value="Calcular" id="calc">
@@ -119,13 +143,17 @@ if (isset($_POST['btncalc'])) {
                     </div>
 
                     <div id="resultadoimpar">
+
                         <?= $resultadoimpar ?>
+
                     </div>
 
                     <div id="resultadopar">
                         <?= $resultadopar ?>
                     </div>
 
+                    <h2 id="numeropar"> PAR : <?= $ttoalizandopar; ?> </h2>
+                    <h2 id="numeroimpar"> IMPAR : <?= $ttoalizandoimpar; ?> </h2>
                 </form>
             </div>
         </div>

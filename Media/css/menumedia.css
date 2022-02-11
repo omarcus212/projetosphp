@@ -23,22 +23,23 @@ label {
     cursor: pointer;
     position: relative;
     display: block;
-    height: 40px;
-    width:40px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 20px;
+    height: 50px;
+    width:50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
     position: fixed;
-    left: 4px;
+    left: 10px;
+    margin-top: 30px;
 }
 
 label span {
     position: absolute;
     display: block;
-    width: 30px;
-    height: 2px;
+    width: 40px;
+    height: 4px;
     border-radius: 2rem;
-    background-color: rgb(255, 255, 255);
-    transition: 1s ease-in-out;
+    background-color: rgb(0, 0, 0);
+    transition: 0.30s;
 }
 
 label span:nth-child(1) {
@@ -47,19 +48,19 @@ label span:nth-child(1) {
 }
 
 label span:nth-child(2) {
-    top: 18px;
+    top: 22px;
     left: 5px;
 }
 
 label span:nth-child(3) {
-    top: 24px;
+    top: 32px;
     left: 5px;
 }
 
 #checkburg:checked+label span:nth-child(1) {
     transform: rotate(-50deg);
-    top: 18px;
-    transition: 0.50s;
+    top: 22px;
+    transition: 0.30s;
 }
 
 #checkburg:checked+label span:nth-child(2) {
@@ -70,24 +71,24 @@ label span:nth-child(3) {
 
 #checkburg:checked+label span:nth-child(3) {
     transform: rotate(50deg);
-    top: 18px;
-    transition: 0.50s;
+    top: 22px;
+    transition: 0.30s;
 }
 
 .menu {
     position: fixed;
     visibility: hidden;
     background-color: rgb(255, 255, 255);
-    width: 110px;
-    height: 200px;
+    width: 170px;
+    height: 250px;
     border-radius: 1rem;
-    top: 40px;
+    top: 100px;
     transition: 0.30s;
-    left: 5px;
+    left: 10px;
 }
 
 .menu a {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
     list-style: none;

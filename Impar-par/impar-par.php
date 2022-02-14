@@ -20,7 +20,7 @@ if(isset($_POST['btncalc'])) {
     $valorfinal = $_POST['listnumerofinal'];
 
 
-    if($_POST['listnumeroinicial'] == '' ||  $_POST['listnumerofina'] == ''){
+    if($valorinicial == -1 ||  $valorfinal == -1){
 
 
          echo (ERRO_NUMERO_NAO_SELECIONADO);
@@ -47,13 +47,14 @@ if(isset($_POST['btncalc'])) {
 
                         $ttoalizandopar++;
                         $resultadopar;
+                       
 
                     } else {
 
                         $resultadoimpar;
                     }
 
-                           $ttoalizandopar++;
+                        
                          $ttoalizandoimpar++;
         }
       
@@ -76,6 +77,9 @@ while($contador <= 500){
     $listinicial .= '<option value="'. $contador .'">'. $contador. '</option>';
    $contador++;
 }
+
+$contador = 0;
+
 while($contador <= 1000){
     $listfinal .= '<option value="'. $contador .'">'. $contador. '</option>';
    $contador++;
@@ -137,15 +141,15 @@ while($contador <= 1000){
                 <form name="frmcalculadora" method="post" action="">
                  
                  <select name="listnumeroinicial" id="list1" min='0' max='500' >
-                 <option value="0" selected> escolha:  </option >
+                 <option value="-1" selected> escolha:  </option >
                   <?= $listinicial ?> 
                 
                 
 
                  </select>
                     <select name="listnumerofinal" id="list2">
-                    <option value="0" selected> escolha:  </option >
-                    <?= $listinicial ?> 
+                    <option value="-1" selected> escolha:  </option >
+                    <?= $listfinal ?> 
                     </select>
                     <div id="container_opcoes">
 
@@ -154,8 +158,8 @@ while($contador <= 1000){
 
                     </div>
                     <div class="titleh3">
-                        <h3> impar</h3>
-                        <h3> par</h3>
+                        <h3> PAR</h3>
+                        <h3> IMPAR</h3>
                     </div>
 
                     <div id="resultadoimpar">

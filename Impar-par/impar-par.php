@@ -1,5 +1,7 @@
 <?php
 
+require('../modulo/config.php');
+ 
 $valorinicial = (float)0;
 $valorfinal = (float)0;
 $resultadopar = (float)0;
@@ -8,25 +10,32 @@ $contador = 0;
 $valortotal = 0;
 $ttoalizandopar = 0;
 $ttoalizandoimpar = 0;
-$teste = (int)0;
+$listfinal = 0;
+$listinicial = 0;
 
-if (isset($_POST['btncalc'])) {
+
+if(isset($_POST['btncalc'])) {
 
     $valorinicial = $_POST['listnumeroinicial'];
-    $valorfinal = $_POST['checklistnumerofinal'];
+    $valorfinal = $_POST['listnumerofinal'];
 
 
+    if($_POST['listnumeroinicial'] == '' ||  $_POST['listnumerofina'] == ''){
 
 
-    if ($valorinicial >= $valorfinal) {
+         echo (ERRO_NUMERO_NAO_SELECIONADO);
+    }
 
-        echo ('<script>alert("ERRO! valor final terá que ser mais alto"); </script>');
-    } else {
+     if($valorinicial >= $valorfinal) {
 
-        $resultadopar = null;
-        $resultadoimpar = null;
-        $valortotalpar = $valorinicial + $valorfinal;
-        $valortotalimpar = $valorinicial + $valorfinal;
+        echo (ERRO_DE_ESCOLHA_NUMERICA );
+
+    }  else {
+
+            $resultadopar = null;
+            $resultadoimpar = null;
+            $valortotalpar = $valorinicial + $valorfinal;
+            $valortotalimpar = $valorinicial + $valorfinal;
 
 
         while ($valorinicial <= $valorfinal) {
@@ -34,20 +43,25 @@ if (isset($_POST['btncalc'])) {
             $resultadoimpar .= $valorinicial++ . '<br>';
             $resultadopar .=  $valorinicial++ . '<br>';
 
-            if ($valorinicial % 2 == 0) {
+                    if ($valorinicial % 2 == 0) {
 
-                $ttoalizandopar++;
-                $resultadopar;
-            } else {
+                        $ttoalizandopar++;
+                        $resultadopar;
 
-                $resultadoimpar;
-            }
+                    } else {
 
-            $ttoalizandoimpar++;
+                        $resultadoimpar;
+                    }
+
+                           $ttoalizandopar++;
+                         $ttoalizandoimpar++;
         }
       
     }
-    if (isset($_POST['btnlimpar'])) {
+
+}
+
+    if (isset($_POST['btnlimpar'])) {    //zerar as variaveis para uma novo calculo//
 
         $valorinicial = (float)0;
         $valorfinal = (float)0;
@@ -56,11 +70,17 @@ if (isset($_POST['btncalc'])) {
         $contador = 0;
         $valortotal = 0;
     }
-}
+
 
 while($contador <= 500){
-    $teste .= '<option value="'. $contador .'">'. $contador. '</option>';
+    $listinicial .= '<option value="'. $contador .'">'. $contador. '</option>';
    $contador++;
+}
+while($contador <= 1000){
+    $listfinal .= '<option value="'. $contador .'">'. $contador. '</option>';
+   $contador++;
+
+
 }
 
 
@@ -118,18 +138,14 @@ while($contador <= 500){
                  
                  <select name="listnumeroinicial" id="list1" min='0' max='500' >
                  <option value="0" selected> escolha:  </option >
-                  <?= $teste ?> 
+                  <?= $listinicial ?> 
                 
                 
 
                  </select>
-                    <select name="checklistnumerofinal" id="list2">
+                    <select name="listnumerofinal" id="list2">
                     <option value="0" selected> escolha:  </option >
-                    <option value="1"> 1 </option>
-                    <option value="2"> 2 </option>
-                    <option value="3"> 3 </option>
-                    <option value="9"> 9 </option>
-                    <option value="1000"> 1000 </option>
+                    <?= $listinicial ?> 
                     </select>
                     <div id="container_opcoes">
 

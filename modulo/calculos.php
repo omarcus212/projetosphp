@@ -47,6 +47,44 @@ function fazercalcl($number1,$number2,$operacao){
        
  }
 
+function calcularTabuada($max, $min){
 
+
+$valormax = (double)$max;
+$valormin = (double)$min;
+$contdor = (double)0;
+$resultado = (double)0;
+  
+
+            $resultado = ''; 
+       
+        while($contdor<=$valormax){
+
+            $total = $valormin*$contdor;
+                   
+             $resultado .= " $valormin x  $contdor = $total <br> ";
+             
+               $contdor++;
+
+
+       }
+
+       return  $resultado;
+       
+
+}
+
+
+
+
+
+    function calcularImparPar($valorinicial, $valorfinal){
+
+
+
+
+
+
+    }
 
 ?>

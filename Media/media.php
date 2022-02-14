@@ -1,6 +1,7 @@
 <?php
 
-require('./modulo/config.php');
+require('../modulo/calculos.php');
+require('../modulo/config.php');
 
 $nota1 = (Double)0;
 $nota2 =  (Double)0;
@@ -27,22 +28,23 @@ if (isset($_POST["btncalc"])) {   //calcular depois que o botão for clicked//
 
            echo (ERRO_MSG_CAIXA_VAZIA);
 
-        } else {
-         }
-    if (!is_numeric($nota1) || !is_numeric($nota2) || !is_numeric($nota3) || !is_numeric($nota4)) {
-        echo (ERRO_MSG_CARACTER_INVALIDO);
-    } else {
+        }    if (!is_numeric($nota1) || !is_numeric($nota2) || !is_numeric($nota3) || !is_numeric($nota4)) {
 
-        $totalmedia = ($nota1 + $nota2 + $nota3 + $nota4) / 4;
-    }
+                     echo (ERRO_MSG_CARACTER_INVALIDO);
+
+             } else {
+
+                     $totalmedia = ($nota1 + $nota2 + $nota3 + $nota4) / 4;
+
+               }
 } else {     //deixando as variaveis em branco caso o butão não tenha sido clicked//
-    $nota1 = (Double)null;
-    $nota2 =  (Double)null;
-    $nota3 = (Double)null;
-    $nota4 = (Double)null;
-    $totalmedia = (Double)null;
+                        $nota1 = (Double)null;
+                        $nota2 =  (Double)null;
+                        $nota3 = (Double)null;
+                        $nota4 = (Double)null;
+                        $totalmedia = (Double)null;
 
-}
+  }
 
 
 

@@ -1,7 +1,9 @@
 <?php
 
 	
-	require('./modulo/calculos.php');
+	require('../modulo/calculos.php');
+    require('../modulo/config.php');
+ 
 	
 
 	
@@ -45,9 +47,9 @@
 
     <head>
         <title>Calculadora - Simples</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="css.css">
         <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="../Calculadora//css//style.css">
     </head>
 
     <body>
@@ -65,7 +67,7 @@
                     <ul>
                         <li><a href="">Calculadora</a></li>
                         <li><a href="../Media/media.php">Media</a></li>
-                        <li><a href="../Tabuada/Tabuada.php">Multiplicação</a></li>
+                        <li><a href="../Tabuada/Tabuada.php">Tabuada</a></li>
                         <li><a href="../Impar-par/impar-par.php">Impar e Par</a></li>
                     </ul>
                 </div>
@@ -90,9 +92,9 @@
                             <input type="radio" name="rdocalc" value="dividir" <?=$opçao=='DIVIDIR' ? 'checked':null;?> >Dividir <br>
 
                             <input type="submit" name="btncalc" value="Calcular">
-                            <input type="submit" name="btnlimpar" value="limpar" <?php $dele='btnlimpar' ; ?>>
+                            <input type="submit" name="btnlimpar" value="limpar" <?php $dele='btnlimpar' ; ?>>  <!-- Gato kkk, só para lembrar -->
 
-                        </div>
+                        
                         <div id="resultado">
                             <?=$resultado?>
                         </div>

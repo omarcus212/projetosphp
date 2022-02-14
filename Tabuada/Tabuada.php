@@ -1,10 +1,14 @@
 <?php
 
+    
+require('../modulo/calculos.php');
+require('../modulo/config.php');
+
+
 $max = (double)0;
 $min = (double)0;
 $contdor = (double)0;
-$resultado = (double)0;
-
+$resultado = (double)null;
 
 if (isset($_POST['btncalc'])) {
 
@@ -12,31 +16,34 @@ if (isset($_POST['btncalc'])) {
     $max = $_POST['txtn2'];
   
 
-    if($_POST['txtn1'] == "" || $_POST['txtn2'] == ""){
-             echo ('Caixa Vazia');
-    }else{
-          if($max == 0){
-               echo('<script>alert("ERRO! impossivel calcular,caracter invalido"); </script>' );
-           
-          }else{
-            $resultado='';
-            while($contdor<=$max){
-                $total = $min*$contdor;
-                 $resultado .= " $min x  $contdor = $total <br> ";
-                 
-                   $contdor++;
+            if($_POST['txtn1'] == "" || $_POST['txtn2'] == ""){
 
+                echo (ERRO_MSG_CAIXA_VAZIA);
+            }
+               if($max == 0){
 
-          }
-       
+                   echo (ERRO_CALC_COM_0);
 
-          }
+                 }else{
+                       
+                    $resultado = (calcularTabuada($max, $min));
+                 }
+
+                    
         
 
     }
 
-         
-}
+    if (isset($_POST["btnlimpar"])) {     //zerar as variaveis para uma novo calculo//
+
+        $max = (double)null;
+        $min = (double)null;
+        $contdor = (double)null;
+        $resultado = (double)null;
+    }
+
+     
+
 
 
 

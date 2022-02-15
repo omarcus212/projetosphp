@@ -1,6 +1,7 @@
 <?php
 
 require('../modulo/config.php');
+require('../modulo/calculos.php');
  
 $valorinicial = (float)0;
 $valorfinal = (float)0;
@@ -57,10 +58,14 @@ if(isset($_POST['btncalc'])) {
                         
                          $ttoalizandoimpar++;
         }
-      
     }
 
 }
+
+                        $listinicial = valorinicial($listinicial);
+                        $listfinal = valorfinal($listfinal);
+
+
 
     if (isset($_POST['btnlimpar'])) {    //zerar as variaveis para uma novo calculo//
 
@@ -71,23 +76,6 @@ if(isset($_POST['btncalc'])) {
         $contador = 0;
         $valortotal = 0;
     }
-
-
-while($contador <= 500){
-    $listinicial .= '<option value="'. $contador .'">'. $contador. '</option>';
-   $contador++;
-}
-
-$contador = 0;
-
-while($contador <= 1000){
-    $listfinal .= '<option value="'. $contador .'">'. $contador. '</option>';
-   $contador++;
-
-
-}
-
-
 
 ?>
 <!DOCTYPE html>

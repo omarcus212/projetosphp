@@ -29,13 +29,14 @@ function fazercalcl($number1, $number2, $operacao)
             $result = $num1 + $num2;
             break;
 
-        case "SUBITRAIR":
+            case "MULTIPLICAR":
+                $result = $num1 * $num2;
+                break;
+
+          case "SUBTRAIR":
             $result = $num1 - $num2;
             break;
 
-        case "MULTIPLICAR":
-            $result = $num1 * $num2;
-            break;
 
         case "DIVIDIR":
             if ($num2 == 0)
@@ -99,7 +100,7 @@ function calculoimparPar($valorinicial, $valorfinal){
 
 
 /*funcao utilizada para retonar o numeros do checklist*/
-function valorinicial($listinicial)
+function checklistinicial($listinicial)
 {
     $contador = 0;
     $valortotal = 0;
@@ -109,33 +110,34 @@ function valorinicial($listinicial)
     $listvalorinicial = (float)$listinicial;
 
 
-
-
     while ($contador <= 500) {
         $listvalorinicial .= '<option value="' . $contador . '">' . $contador . '</option>';
         $contador++;
     }
-
-    function valorfinal($listfinal)
-    {
-        $listvalorfinal = (float)$listfinal;
-        $contador = 0;
-        $valortotal = 0;
-        $ttoalizandopar = 0;
-        $ttoalizandoimpar = 0;
-
-
-        $contador = 0;
-
-        while ($contador <= 1000) {
-            $listvalorfinal .= '<option value="' . $contador . '">' . $contador . '</option>';
-            $contador++;
-        }
-
-        return $listvalorfinal;
-    }
-
-
+    
 
     return $listvalorinicial;
+}
+
+
+
+
+
+function checklistfinal($listfinal)
+{
+    $listvalorfinal = (float)$listfinal;
+    $contador = 0;
+    $valortotal = 0;
+    $ttoalizandopar = 0;
+    $ttoalizandoimpar = 0;
+
+
+    $contador = 100;
+
+    while ($contador <= 1000) {
+        $listvalorfinal .= '<option value="' . $contador . '">' . $contador . '</option>';
+        $contador++;
+    }
+
+    return $listvalorfinal;
 }

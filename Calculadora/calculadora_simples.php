@@ -32,7 +32,7 @@
 
 											  else{
 														$opçao = strtoupper($_POST['rdocalc']);
-													$resultado=fazercalcl($valor1,$valor2,$opçao);
+													    $resultado=fazercalcl($valor1,$valor2,$opçao);
 							                    }      
 						         }        	   
 
@@ -87,7 +87,7 @@
                         Valor 1:<input type="text" name="txtn1" value="<?php echo($valor1);?>"> <br> Valor 2:<input type="text" name="txtn2" value="<?= $valor2;?>"> <br>
                         <div id="container_opcoes">
                             <input type="radio" name="rdocalc" value="somar" <?=$opçao=='SOMAR' ? 'checked':null;?> >Somar<br>
-                            <input type="radio" name="rdocalc" value="subtrair" <?=$opçao=='SUBTRAIR' ? 'checked':null;?>>Subtrair <br>
+                            <input type="radio" name="rdocalc" value="subtrair" <?=$opçao== 'SUBTRAIR' ? 'checked' :null;?> >Subtrair <br>
                             <input type="radio" name="rdocalc" value="multiplicar" <?=$opçao=='MULTIPLICAR' ? 'checked':null;?> >Multiplicar <br>
                             <input type="radio" name="rdocalc" value="dividir" <?=$opçao=='DIVIDIR' ? 'checked':null;?> >Dividir <br>
 

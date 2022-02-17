@@ -101,15 +101,18 @@ h2{
 }
 
 #numeropar{
+    background-color: aqua;
     position: absolute;
     margin-left: 240px;
     margin-top: 160px;
 }
 
 #numeroimpar{
+    background-color: olivedrab;
     position: absolute;
     margin-top: 160px;
     margin-left: 20px;
+    
    
 }
 

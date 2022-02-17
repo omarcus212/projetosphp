@@ -37,15 +37,7 @@ if (isset($_POST["btncalc"])) {   //calcular depois que o botão for clicked//
                      $totalmedia = ($nota1 + $nota2 + $nota3 + $nota4) / 4;
 
                }
-} else {     //deixando as variaveis em branco caso o butão não tenha sido clicked//
-                        $nota1 = (Double)null;
-                        $nota2 =  (Double)null;
-                        $nota3 = (Double)null;
-                        $nota4 = (Double)null;
-                        $totalmedia = (Double)null;
-
-  }
-
+} 
 
 
 

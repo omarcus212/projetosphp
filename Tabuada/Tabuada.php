@@ -99,7 +99,7 @@ if (isset($_POST['btncalc'])) {
             <div id="form">
                 <form name="frmcalculadora" method="post" action="">
 
-                    Multiplicador: <input type="text" name="txtn1" id="multcaixa" value="<?php echo($min);?>"> <br> Maxmultiplicador: <input type="text" name="txtn2" id="maxcaixa" value="<?php echo($max);?>" > <br>
+                    Multiplicador: <input type="number" name="txtn1" id="multcaixa" value="<?php echo($min);?>"> <br> Maxmultiplicador: <input type="number" name="txtn2" id="maxcaixa" value="<?php echo($max);?>" > <br>
                     <div id="container_opcoes">
 
                         <input type="submit" name="btncalc" value="Calcular" id="calc">

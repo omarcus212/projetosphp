@@ -1,0 +1,2 @@
+# projetosphp
+.phpnet (site).
